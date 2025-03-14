@@ -1,0 +1,57 @@
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles_thanks.css">
+<body>
+    <header>
+        <div class="container-logo">
+            <a href="index.html"></a><img src="/imgs/logo.png" alt="Logo" class="logo"></a>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="thank-you-section">
+            <div class="thank-you-card">
+                <i class="fas fa-check-circle icon"></i>
+                <h1>Mensagem Enviada com Sucesso!</h1>
+                <div class="loading-line"></div>
+                <p>Agradecemos pelo seu contato. Sua mensagem foi recebida e será analisada por nossa equipe.</p>
+                <p>Comprometemo-nos a responder o mais breve possível, geralmente em até <span class="highlight">24 horas úteis</span>.</p>
+                <p>Enquanto isso, você pode continuar explorando nosso site e conhecendo mais sobre nossos produtos e serviços.</p>
+                <a href="index.html" class="btn">Voltar para a Página Inicial</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Led Line Films. Todos os direitos reservados.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/ledline_films/"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Contagem regressiva para redirecionamento (opcional)
+        // Descomente o código abaixo se quiser redirecionar automaticamente
+        /*
+        let secondsRemaining = 10;
+        const countdownElement = document.createElement('p');
+        countdownElement.innerHTML = `Você será redirecionado para a página inicial em <span class="highlight">${secondsRemaining}</span> segundos...`;
+        document.querySelector('.thank-you-card').appendChild(countdownElement);
+        
+        const countdown = setInterval(() => {
+            secondsRemaining--;
+            countdownElement.innerHTML = `Você será redirecionado para a página inicial em <span class="highlight">${secondsRemaining}</span> segundos...`;
+            
+            if (secondsRemaining <= 0) {
+                clearInterval(countdown);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+        */
+    </script>
+</body>
+</html>

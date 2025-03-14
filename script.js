@@ -24,3 +24,12 @@ window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     header.classList.toggle('scrolled', window.scrollY > 0);
 });
+
+document.querySelector('form').addEventListener('submit', function(e) {
+    const button = document.querySelector('button[type="submit"]');
+    button.innerHTML = 'Enviando...';
+    button.disabled = true;
+    
+    // O formulário será enviado normalmente para o FormSubmit
+    // Este código apenas muda o botão para feedback visual
+});
