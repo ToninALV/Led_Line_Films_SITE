@@ -1,10 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agradecimento - Mensagem Enviada</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles_thanks.css">
 </head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="styles_thanks.css">
 <body>
     <header>
-        <div class="container-logo">
-            <a href="index.html"></a><img src="/imgs/logo.png" alt="Logo" class="logo"></a>
+        <div class="container">
+            <div class="logo-container">
+                <img src="/imgs/logo.png" alt="Logo" class="logo">
+            </div>
         </div>
     </header>
 
@@ -33,25 +41,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        // Contagem regressiva para redirecionamento (opcional)
-        // Descomente o código abaixo se quiser redirecionar automaticamente
-        /*
-        let secondsRemaining = 10;
-        const countdownElement = document.createElement('p');
-        countdownElement.innerHTML = `Você será redirecionado para a página inicial em <span class="highlight">${secondsRemaining}</span> segundos...`;
-        document.querySelector('.thank-you-card').appendChild(countdownElement);
-        
-        const countdown = setInterval(() => {
-            secondsRemaining--;
-            countdownElement.innerHTML = `Você será redirecionado para a página inicial em <span class="highlight">${secondsRemaining}</span> segundos...`;
-            
-            if (secondsRemaining <= 0) {
-                clearInterval(countdown);
-                window.location.href = 'index.html';
-            }
-        }, 1000);
-        */
-    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
