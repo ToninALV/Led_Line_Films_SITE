@@ -463,21 +463,19 @@ footer {
     margin-bottom: 30px;
 }
 
-.social-icons a {
+.social-icons img {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--secondary-color);
+    width: 32px;
+    height: 32px;
+
     color: var(--text-color);
-    margin: 0 10px;
     transition: var(--transition);
 }
 
 .social-icons a:hover {
-    background-color: var(--accent-color);
+    
     transform: translateY(-5px);
 }
 
