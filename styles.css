@@ -84,7 +84,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1000;
-    padding: 10px 0;
+    padding: 5px 0;
     border-bottom: 1px solid rgba(243, 255, 0, 0.1);
     transition: var(--transition);
 }
@@ -614,6 +614,44 @@ nav ul li a:hover .nav-hover-line {
     margin-bottom: 20px;
 }
 
+.services-cta {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.btn-lg {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-lg:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M9.4 18l.7-.7-5-5H22v-1H5.1l5-5-.7-.7-6.4 6.4 6.4 6z" transform="rotate(180, 12, 12)"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+    opacity: 0;
+}
+
+.btn-lg:hover:after {
+    transform: translate(5px, -50%);
+    opacity: 1;
+}
+
+.services-cta p {
+    margin-top: 15px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
 /* Seção Portfólio */
 .portfolio {
     padding: 100px 0;
@@ -828,55 +866,24 @@ footer {
     border-top: 1px solid rgba(243, 255, 0, 0.1);
 }
 
-.footer-logo {
-    max-width: 200px;
-    margin: 0 auto 20px;
-}
-
 .social-icons {
+    color: #f3ff00;
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
+    height: 30px;
 }
 
 .social-icons a {
+    color: #f3ff00;
     margin: 0 10px;
     transition: transform 0.3s ease;
-}
-
-.social-icons img {
-    width: 32px;
-    height: 32px;
-    transition: var(--transition);
+    font-size: 1.5rem;
 }
 
 .social-icons a:hover {
     transform: translateY(-5px);
-}
-
-.footer-nav {
-    margin-bottom: 30px;
-}
-
-.footer-nav ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    list-style: none;
-}
-
-.footer-nav ul li {
-    margin: 0 15px 10px;
-}
-
-.footer-nav ul li a {
     color: var(--text-color);
-    text-decoration: none;
-    transition: var(--transition);
-}
-
-.footer-nav ul li a:hover {
-    color: var(--accent-color);
 }
 
 .copyright {

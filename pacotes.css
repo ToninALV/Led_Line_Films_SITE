@@ -1,0 +1,416 @@
+
+:root {
+    --primary-color: #000000;         /* Preto como na proposta */
+    --accent-color: #f3ff00;          /* Amarelo vibrante como na proposta */
+    --text-color: #ffffff;            /* Texto branco */
+    --secondary-color: #111111;       /* Tom escuro secundário */
+    --transition: all 0.3s ease;
+}
+
+/* Reset global e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}/* Estilos específicos para a página de pacotes e serviços */
+
+/* Hero da página de pacotes */
+.pacotes-hero {
+    position: relative;
+    height: 50vh;
+    min-height: 300px;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/imgs/pacotes-bg.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 250px; /* Substitui a margem por padding */
+    margin-top: 0;
+}
+
+.pacotes-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.pacotes-hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    animation: fadeInUp 1s ease;
+}
+
+.pacotes-hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.2s ease;
+}
+
+.pacotes-decor-grid {
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background-image: linear-gradient(var(--accent-color) 1px, transparent 1px), 
+                      linear-gradient(90deg, var(--accent-color) 1px, transparent 1px);
+    background-size: 15px 15px;
+    opacity: 0.05;
+    z-index: 1;
+}
+
+.pacotes-decor-circle {
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    opacity: 0.03;
+    z-index: 1;
+}
+
+/* Seção de serviços */
+.pacotes-servicos {
+    padding: 100px 0;
+    background-color: var(--primary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.pacotes-servicos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.pacote-servico-card {
+    background-color: rgba(17, 17, 17, 0.7);
+    border: 1px solid rgba(243, 255, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.pacote-servico-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: rgba(243, 255, 0, 0.3);
+}
+
+.servico-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.servico-icon img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.pacote-servico-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.pacote-servico-card p {
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.servico-preco {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-top: auto;
+}
+
+/* Seção de pacotes */
+.pacotes-opcoes {
+    padding: 100px 0;
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.pacotes-opcoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.pacote-opcao-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(243, 255, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.pacote-opcao-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: rgba(243, 255, 0, 0.3);
+}
+
+.pacote-header {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.pacote-number {
+    background-color: var(--accent-color);
+    color: black;
+    font-weight: 700;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.pacote-header h3 {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.pacote-items {
+    list-style: none;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.pacote-items li {
+    padding: 10px 0;
+    border-bottom: 1px dashed rgba(243, 255, 0, 0.1);
+    position: relative;
+    padding-left: 25px;
+}
+
+.pacote-items li:before {
+    content: '✓';
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+
+.pacote-items li:last-child {
+    border-bottom: none;
+}
+
+.pacote-preco {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin: 20px 0;
+    text-align: center;
+}
+
+.pacotes-info {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
+.info-icon {
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+.pacotes-cta {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn-lg {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+}
+
+.pacotes-cta p {
+    margin-top: 15px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* Seção de contato rápido */
+.pacotes-contato {
+    padding: 100px 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('/imgs/contato-bg.jpg') center/cover no-repeat;
+    text-align: center;
+}
+
+.pacotes-contato-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pacotes-contato-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.pacotes-contato-content p {
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+}
+
+.pacotes-contato-info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.contato-item {
+    display: flex;
+    align-items: center;
+}
+
+.contato-icon {
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+.contato-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contato-item a:hover {
+    color: var(--accent-color);
+}
+
+/* Botão outline */
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--accent-color);
+    color: black;
+}
+
+/* Elementos decorativos */
+.pacotes-servicos::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 150px;
+    height: 150px;
+    background-image: linear-gradient(var(--accent-color) 1px, transparent 1px), 
+                      linear-gradient(90deg, var(--accent-color) 1px, transparent 1px);
+    background-size: 15px 15px;
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.pacotes-opcoes::before {
+    content: '';
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+    opacity: 0.05;
+    z-index: 0;
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .pacotes-hero {
+        height: 40vh;
+        margin-top: 0;
+    }
+    
+    .pacotes-hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .pacotes-hero-content p {
+        font-size: 1rem;
+    }
+    
+    .pacotes-contato-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .pacote-preco {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pacotes-servicos-grid,
+    .pacotes-opcoes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .pacotes-hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .pacotes-contato-content h2 {
+        font-size: 1.8rem;
+    }
+}
