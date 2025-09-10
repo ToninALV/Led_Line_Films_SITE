@@ -1,7 +1,6 @@
-
 :root {
-    --primary-color: #000000;         /* Preto como na proposta */
-    --accent-color: #f3ff00;          /* Amarelo vibrante como na proposta */
+    --primary-color: #050505;         /* Preto como na proposta */
+    --accent-color: #ffba08;          /* Amarelo vibrante como na proposta */
     --text-color: #ffffff;            /* Texto branco */
     --secondary-color: #111111;       /* Tom escuro secundário */
     --transition: all 0.3s ease;
